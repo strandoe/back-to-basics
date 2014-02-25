@@ -1,0 +1,12 @@
+{{# partial "content" }}
+    <form action="/" method="POST">
+        <label for="text">{{i18n "text" bundle="mineMeldinger"}}</label>
+        <input id="text" type="text" name="text" value="{{text}}" />
+        {{#each errors.text}}
+            <div class="error">{{i18n this bundle="mineMeldinger"}}</div>
+        {{/each}}
+        <input type="submit" value="Send" />
+    </form>
+{{/partial}}
+
+{{> com/strandoe/springtesting/base}}
